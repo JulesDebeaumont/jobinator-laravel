@@ -11,7 +11,7 @@
                             </header>
                             <div class="card-body">
                                 <div>
-                                    {{ Str::limit($annonce->description, 200, $end="..") }}
+                                    {{ Str::limit($annonce->description, 200, $end = '..') }}
                                 </div>
                             </div>
                             <footer class="card-footer text-center">
@@ -21,6 +21,10 @@
                     </article>
                 </div>
             @endforeach
+        </div>
+
+        <div class="py-5 px-5">
+            {{ $annonces->links() }}
         </div>
     </div>
 </x-app-layout>

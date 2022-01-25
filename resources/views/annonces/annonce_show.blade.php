@@ -55,8 +55,18 @@
             </footer>
         </article>
 
-        <div class="text-center my-5">
-            <a class="btn btn-primary" href="{{ route('annonce_index') }}">Back</a>
+        <div class="container">
+            <div class="row">
+                <div class="text-center my-5 col-5">
+                    <a class="btn btn-primary" href="{{ route('annonce_index') }}">Back</a>
+                </div>
+
+                <div class="text-center my-5 col-5">
+                    <a class="btn btn-primary" href="{{ route('annonce_edit', ['id' => $annonce->id]) }}">Edit</a>
+                    @include('annonces.annonce_delete')
+                </div>
+
+            </div>
         </div>
     </div>
 </x-app-layout>
